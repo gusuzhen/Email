@@ -472,7 +472,7 @@ public class AccountSetupExchangeFragment extends AccountServerBaseFragment
     @Override
     public void onCertificateRequested() {
         Intent intent = new Intent(CertificateRequestor.ACTION_REQUEST_CERT);
-        intent.setData(Uri.parse("eas://com.android.emailcommon/certrequest"));
+        intent.setData(Uri.parse("eas://cn.suishen.emailcommon/certrequest"));
         startActivityForResult(intent, CERTIFICATE_REQUEST);
     }
 

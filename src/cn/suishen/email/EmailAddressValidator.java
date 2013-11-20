@@ -16,7 +16,7 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.mail.Address;
+import cn.suishen.emailcommon.mail.Address;
 
 import android.widget.AutoCompleteTextView.Validator;
 

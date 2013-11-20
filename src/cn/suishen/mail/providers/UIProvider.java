@@ -26,9 +26,14 @@ import android.provider.BaseColumns;
 import android.provider.OpenableColumns;
 import android.text.TextUtils;
 
-import com.android.common.contacts.DataUsageStatUpdater;
+//import com.android.common.contacts.DataUsageStatUpdater;
+
+
 
 import java.util.ArrayList;
+
+import cn.suishen.emailcommon.DataUsageStatUpdater;
+
 
 public class UIProvider {
     public static final String EMAIL_SEPARATOR = ",";

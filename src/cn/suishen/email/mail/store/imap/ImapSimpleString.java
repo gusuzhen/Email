@@ -16,7 +16,7 @@
 
 package cn.suishen.email.mail.store.imap;
 
-import com.android.emailcommon.utility.Utility;
+import cn.suishen.emailcommon.utility.Utility;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

@@ -60,6 +60,12 @@ public class PopImapSyncAdapterService extends Service {
             } catch (OperationCanceledException e) {
             }
         }
+
+		
+
+		
+
+		
     }
 
     @Override
@@ -87,7 +93,7 @@ public class PopImapSyncAdapterService extends Service {
             String emailAddress = account.name;
             // Find an EmailProvider account with the Account's email address
             Cursor c = context.getContentResolver().query(
-                    cn.suishen.email.provider.Account.CONTENT_URI,
+                    cn.suishen.emailcommon.provider.Account.CONTENT_URI,
                     EmailContent.ID_PROJECTION, AccountColumns.EMAIL_ADDRESS + "=?",
                     new String[] {emailAddress}, null);
             if (c.moveToNext()) {

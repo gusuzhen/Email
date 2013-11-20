@@ -16,13 +16,13 @@
 
 package cn.suishen.email.provider;
 
-import com.android.emailcommon.Logging;
-import com.android.emailcommon.internet.MimeUtility;
-import com.android.emailcommon.provider.EmailContent;
-import com.android.emailcommon.provider.EmailContent.Attachment;
-import com.android.emailcommon.provider.EmailContent.AttachmentColumns;
-import com.android.emailcommon.utility.AttachmentUtilities;
-import com.android.emailcommon.utility.AttachmentUtilities.Columns;
+import cn.suishen.emailcommon.Logging;
+import cn.suishen.emailcommon.internet.MimeUtility;
+import cn.suishen.emailcommon.provider.EmailContent;
+import cn.suishen.emailcommon.provider.EmailContent.Attachment;
+import cn.suishen.emailcommon.provider.EmailContent.AttachmentColumns;
+import cn.suishen.emailcommon.utility.AttachmentUtilities;
+import cn.suishen.emailcommon.utility.AttachmentUtilities.Columns;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;

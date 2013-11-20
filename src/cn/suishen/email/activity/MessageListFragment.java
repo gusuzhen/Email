@@ -60,15 +60,13 @@ import cn.suishen.email.NotificationController;
 import cn.suishen.email.R;
 import cn.suishen.email.RefreshManager;
 import cn.suishen.email.activity.MessagesAdapter.SearchResultsCursor;
-import cn.suishen.email.provider.EmailProvider;
+import cn.suishen.email.provider.MyEmailProvider;
 import cn.suishen.emailcommon.Logging;
 import cn.suishen.emailcommon.provider.Account;
 import cn.suishen.emailcommon.provider.Mailbox;
 import cn.suishen.emailcommon.provider.EmailContent.Message;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 import cn.suishen.emailcommon.utility.Utility;
-
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -516,7 +514,6 @@ public class MessageListFragment extends ListFragment
         outState.putLong(BUNDLE_KEY_SELECTED_MESSAGE_ID, mSelectedMessageId);
     }
 
-    @VisibleForTesting
     void restoreInstanceState(Bundle savedInstanceState) {
         if (Logging.DEBUG_LIFECYCLE && Email.DEBUG) {
             Log.d(Logging.LOG_TAG, this + " restoreInstanceState");
@@ -750,7 +747,7 @@ public class MessageListFragment extends ListFragment
                     MessageListItem.MESSAGE_LIST_ITEMS_CLIP_LABEL, Message.CONTENT_URI.buildUpon()
                     .appendPath(Long.toString(listItem.mMessageId))
                     .appendQueryParameter(
-                            EmailProvider.MESSAGE_URI_PARAMETER_MAILBOX_ID,
+                            MyEmailProvider.MESSAGE_URI_PARAMETER_MAILBOX_ID,
                             Long.toString(mailboxId))
                             .build());
             Set<Long> selectedMessageIds = mListAdapter.getSelectedSet();

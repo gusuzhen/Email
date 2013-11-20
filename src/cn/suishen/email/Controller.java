@@ -55,7 +55,7 @@ import cn.suishen.emailcommon.utility.AttachmentUtilities;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
+//import com.google.common.annotations.VisibleForTesting;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -536,7 +536,7 @@ public class Controller {
      * Create a mailbox given the account and mailboxType.
      * TODO: Does this need to be signaled explicitly to the sync engines?
      */
-    @VisibleForTesting
+ 
     long createMailbox(long accountId, int mailboxType) {
         if (accountId < 0 || mailboxType < 0) {
             String mes = "Invalid arguments " + accountId + ' ' + mailboxType;
@@ -1360,7 +1360,7 @@ public class Controller {
         }
 
         @Override
-        public void messageRetrieved(com.android.emailcommon.mail.Message message) {
+        public void messageRetrieved(cn.suishen.emailcommon.mail.Message message) {
         }
     }
 

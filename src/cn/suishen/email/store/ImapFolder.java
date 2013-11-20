@@ -49,7 +49,6 @@ import cn.suishen.emailcommon.provider.Mailbox;
 import cn.suishen.emailcommon.service.SearchParams;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -142,7 +141,6 @@ class ImapFolder extends Folder {
     }
 
     @Override
-    @VisibleForTesting
     public boolean isOpen() {
         return mExists && mConnection != null;
     }
@@ -384,7 +382,6 @@ class ImapFolder extends Folder {
         return uids.toArray(Utility.EMPTY_STRINGS);
     }
 
-    @VisibleForTesting
     String[] searchForUids(String searchCriteria) throws MessagingException {
         checkOpen();
         try {
@@ -403,7 +400,6 @@ class ImapFolder extends Folder {
     }
 
     @Override
-    @VisibleForTesting
     public Message getMessage(String uid) throws MessagingException {
         checkOpen();
 
@@ -416,7 +412,6 @@ class ImapFolder extends Folder {
         return null;
     }
 
-    @VisibleForTesting
     protected static boolean isAsciiString(String str) {
         int len = str.length();
         for (int i = 0; i < len; i++) {
@@ -432,7 +427,6 @@ class ImapFolder extends Folder {
      * with the additional CHARSET argument and sending "foo" as a literal (e.g. {3}<CRLF>foo}
      */
     @Override
-    @VisibleForTesting
     public Message[] getMessages(SearchParams params, MessageRetrievalListener listener)
             throws MessagingException {
         List<String> commands = new ArrayList<String>();
@@ -471,7 +465,6 @@ class ImapFolder extends Folder {
     }
 
     @Override
-    @VisibleForTesting
     public Message[] getMessages(int start, int end, MessageRetrievalListener listener)
             throws MessagingException {
         if (start < 1 || end < 1 || end < start) {
@@ -482,7 +475,6 @@ class ImapFolder extends Folder {
     }
 
     @Override
-    @VisibleForTesting
     public Message[] getMessages(String[] uids, MessageRetrievalListener listener)
             throws MessagingException {
         if (uids == null) {

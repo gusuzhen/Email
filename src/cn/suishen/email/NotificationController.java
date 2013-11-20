@@ -55,8 +55,8 @@ import cn.suishen.emailcommon.provider.EmailContent.MailboxColumns;
 import cn.suishen.emailcommon.provider.EmailContent.Message;
 import cn.suishen.emailcommon.provider.EmailContent.MessageColumns;
 import cn.suishen.emailcommon.utility.Utility;
-
-import com.google.common.annotations.VisibleForTesting;
+//
+//import com.google.common.annotations.VisibleForTesting;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -429,7 +429,6 @@ public class NotificationController {
      *
      * NOTE: DO NOT CALL THIS METHOD FROM THE UI THREAD (DATABASE ACCESS)
      */
-    @VisibleForTesting
     Notification createNewMessageNotification(long accountId, long mailboxId, Cursor messageCursor,
             long newestMessageId, int unseenMessageCount, int unreadCount) {
         final Account account = Account.restoreAccountWithId(mContext, accountId);

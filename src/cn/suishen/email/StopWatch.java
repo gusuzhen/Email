@@ -16,7 +16,7 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.Logging;
+import cn.suishen.emailcommon.Logging;
 
 import android.os.SystemClock;
 import android.util.Log;

@@ -16,7 +16,7 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.provider.Account;
+import cn.suishen.emailcommon.provider.Account;
 
 import android.app.AlertDialog;
 import android.content.Context;

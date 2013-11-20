@@ -41,7 +41,6 @@ import cn.suishen.emailcommon.service.SearchParams;
 import cn.suishen.emailcommon.utility.LoggingInputStream;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -951,7 +950,6 @@ public class Pop3Store extends Store {
         }
 
         @Override
-        @VisibleForTesting
         public boolean isOpen() {
             return mTransport.isOpen();
         }

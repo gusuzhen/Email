@@ -30,15 +30,13 @@ import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.StatusUpdates;
 import android.util.Log;
 
-import com.android.emailcommon.Logging;
-import com.android.emailcommon.utility.Utility;
-import com.google.common.annotations.VisibleForTesting;
+import cn.suishen.emailcommon.Logging;
+import cn.suishen.emailcommon.utility.Utility;
 
 /**
  * Loader to load presence statuses and the contact photo.
  */
 public class ContactStatusLoader extends AsyncTaskLoader<ContactStatusLoader.Result> {
-    @VisibleForTesting
     static final int PRESENCE_UNKNOWN_RESOURCE_ID = android.R.drawable.presence_offline;
 
     /** email address -> photo id, presence */

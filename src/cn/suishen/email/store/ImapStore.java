@@ -46,7 +46,6 @@ import cn.suishen.emailcommon.service.EmailServiceProxy;
 import cn.suishen.emailcommon.utility.Utility;
 
 import com.beetstra.jutf7.CharsetProvider;
-import com.google.common.annotations.VisibleForTesting;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -83,9 +82,9 @@ public class ImapStore extends Store {
     private static final Charset MODIFIED_UTF_7_CHARSET =
             new CharsetProvider().charsetForName("X-RFC-3501");
 
-    @VisibleForTesting static String sImapId = null;
-    @VisibleForTesting String mPathPrefix;
-    @VisibleForTesting String mPathSeparator;
+ static String sImapId = null;
+     String mPathPrefix;
+    String mPathSeparator;
 
     private final ConcurrentLinkedQueue<ImapConnection> mConnectionPool =
             new ConcurrentLinkedQueue<ImapConnection>();
@@ -141,7 +140,6 @@ public class ImapStore extends Store {
         mPathPrefix = recvAuth.mDomain;
     }
 
-    @VisibleForTesting
     Collection<ImapConnection> getConnectionPoolForTest() {
         return mConnectionPool;
     }
@@ -152,7 +150,6 @@ public class ImapStore extends Store {
      * should already be set up and ready to use.  Do not use for real code.
      * @param testTransport The Transport to inject and use for all future communication.
      */
-    @VisibleForTesting
     void setTransportForTest(Transport testTransport) {
         mTransport = testTransport;
     }
@@ -181,7 +178,6 @@ public class ImapStore extends Store {
      * @param capabilities a list of the capabilities from the server
      * @return a String for use in an IMAP ID message.
      */
-    @VisibleForTesting
     static String getImapId(Context context, String userName, String host, String capabilities) {
         // The first section is global to all IMAP connections, and generates the fixed
         // values in any IMAP ID message
@@ -242,7 +238,6 @@ public class ImapStore extends Store {
      * @param networkOperator TelephonyManager.getNetworkOperatorName()
      * @return the static (never changes) portion of the IMAP ID
      */
-    @VisibleForTesting
     static String makeCommonImapId(String packageName, String version,
             String codeName, String model, String id, String vendor, String networkOperator) {
 
@@ -318,7 +313,6 @@ public class ImapStore extends Store {
     /**
      * Creates a mailbox hierarchy out of the flat data provided by the server.
      */
-    @VisibleForTesting
     static void createHierarchy(HashMap<String, ImapFolder> mailboxes) {
         Set<String> pathnames = mailboxes.keySet();
         for (String path : pathnames) {

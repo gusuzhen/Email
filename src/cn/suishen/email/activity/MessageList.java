@@ -21,7 +21,6 @@ import cn.suishen.emailcommon.provider.Account;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import android.app.Activity;
 import android.content.Context;
@@ -33,7 +32,6 @@ import android.os.Bundle;
  * A dummy activity to support old-style (pre-honeycomb) account shortcuts.
  */
 public class MessageList extends Activity {
-    @VisibleForTesting
     static final String EXTRA_ACCOUNT_ID = "com.android.email.activity._ACCOUNT_ID";
 
     private final EmailAsyncTask.Tracker mTaskTracker = new EmailAsyncTask.Tracker();

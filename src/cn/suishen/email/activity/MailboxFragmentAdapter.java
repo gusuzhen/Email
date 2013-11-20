@@ -47,7 +47,6 @@ import cn.suishen.emailcommon.provider.EmailContent.MailboxColumns;
 import cn.suishen.emailcommon.provider.EmailContent.Message;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 
@@ -602,7 +601,6 @@ class MailboxFragmentAdapter extends CursorAdapter {
     /**
      * Loader for mailboxes in "Combined view".
      */
-    @VisibleForTesting
     static class CombinedMailboxLoader extends ThrottlingCursorLoader {
         private static final String[] ACCOUNT_PROJECTION = new String[] {
             EmailContent.RECORD_ID, AccountColumns.DISPLAY_NAME,
@@ -638,7 +636,6 @@ class MailboxFragmentAdapter extends CursorAdapter {
             return returnCursor;
         }
 
-        @VisibleForTesting
         static MatrixCursor buildCombinedMailboxes(Context c, Cursor innerCursor) {
             MatrixCursor cursor = new ClosingMatrixCursor(MATRIX_PROJECTION, innerCursor);
             // Combined inbox -- show unread count

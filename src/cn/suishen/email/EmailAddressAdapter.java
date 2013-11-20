@@ -16,9 +16,9 @@
 
 package cn.suishen.email;
 
-import com.android.common.contacts.BaseEmailAddressAdapter;
-import com.android.emailcommon.provider.Account;
-import com.android.ex.chips.AccountSpecifier;
+//import com.android.common.contacts.BaseEmailAddressAdapter;
+//import cn.suishen.emailcommon.provider.Account;
+//import com.android.ex.chips.AccountSpecifier;
 
 import android.content.Context;
 import android.text.TextUtils;

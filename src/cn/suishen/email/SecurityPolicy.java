@@ -31,7 +31,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.RemoteException;
 import android.util.Log;
-import cn.suishen.email.provider.EmailProvider;
 import cn.suishen.email.service.EmailBroadcastProcessorService;
 import cn.suishen.emailcommon.Logging;
 import cn.suishen.emailcommon.provider.Account;
@@ -42,7 +41,6 @@ import cn.suishen.emailcommon.provider.EmailContent.PolicyColumns;
 import cn.suishen.emailcommon.utility.TextUtilities;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 
@@ -111,7 +109,6 @@ public class SecurityPolicy {
      * @return a policy representing the strongest aggregate.  If no policy sets are defined,
      * a lightweight "nothing required" policy will be returned.  Never null.
      */
-    @VisibleForTesting
     Policy computeAggregatePolicy() {
         boolean policiesFound = false;
         Policy aggregate = new Policy();
@@ -759,7 +756,6 @@ public class SecurityPolicy {
      * the account that forces the password to be refreshed.
      * @return -1 if no expirations, or accountId if one is found
      */
-    @VisibleForTesting
     /*package*/ static long findShortestExpiration(Context context) {
         long policyId = Utility.getFirstRowLong(context, Policy.CONTENT_URI, Policy.ID_PROJECTION,
                 HAS_PASSWORD_EXPIRATION, null, PolicyColumns.PASSWORD_EXPIRATION_DAYS + " ASC",
@@ -775,7 +771,6 @@ public class SecurityPolicy {
      * @param controller
      * @return true if one or more accounts were wiped
      */
-    @VisibleForTesting
     /*package*/ static boolean wipeExpiredAccounts(Context context, Controller controller) {
         boolean result = false;
         Cursor c = context.getContentResolver().query(Policy.CONTENT_URI,

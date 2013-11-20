@@ -16,7 +16,7 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.mail.MessagingException;
+import cn.suishen.emailcommon.mail.MessagingException;
 
 import android.content.Context;
 

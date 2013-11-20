@@ -16,8 +16,8 @@
 
 package cn.suishen.email.activity.setup;
 
-import com.android.emailcommon.provider.Account;
-import com.android.emailcommon.provider.Policy;
+import cn.suishen.emailcommon.provider.Account;
+import cn.suishen.emailcommon.provider.Policy;
 
 import android.accounts.AccountAuthenticatorResponse;
 import android.os.Bundle;

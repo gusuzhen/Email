@@ -40,7 +40,6 @@ import cn.suishen.emailcommon.provider.EmailContent.AccountColumns;
 import cn.suishen.emailcommon.provider.EmailContent.MailboxColumns;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 
 import java.util.ArrayList;

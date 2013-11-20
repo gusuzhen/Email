@@ -42,14 +42,12 @@ import cn.suishen.email.Controller;
 import cn.suishen.email.Email;
 import cn.suishen.email.R;
 import cn.suishen.email.RefreshManager;
-import cn.suishen.email.provider.EmailProvider;
 import cn.suishen.emailcommon.Logging;
 import cn.suishen.emailcommon.provider.Account;
 import cn.suishen.emailcommon.provider.Mailbox;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.Timer;
 
@@ -610,7 +608,6 @@ public class MailboxListFragment extends ListFragment implements OnItemClickList
      * navigation, given the current parent mailbox ID, the highlighted mailbox ID, and {@link
      * #mEnableHighlight}.
      */
-    @VisibleForTesting
     static class FindParentMailboxTask extends EmailAsyncTask<Void, Void, Long[]> {
         public interface ResultCallback {
             /**
@@ -1093,7 +1090,7 @@ public class MailboxListFragment extends ListFragment implements OnItemClickList
         int mimeTypeCount = description.getMimeTypeCount();
         for (int i = 0; i < mimeTypeCount; i++) {
             String mimeType = description.getMimeType(i);
-            if (mimeType.startsWith(EmailProvider.EMAIL_MESSAGE_MIME_TYPE)) {
+            if (mimeType.startsWith(MyEmailProvider.EMAIL_MESSAGE_MIME_TYPE)) {
                 if (DEBUG_DRAG_DROP) {
                     Log.d(TAG, "=== Drag started");
                 }

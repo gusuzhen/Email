@@ -22,7 +22,6 @@ import cn.suishen.emailcommon.provider.Account;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -148,7 +147,6 @@ public class MessageFileView extends Activity implements MessageViewFragmentBase
         // Not important for EMLs
     }
 
-    @VisibleForTesting
     MessageFileViewFragment getFragment() {
         return mFragment;
     }

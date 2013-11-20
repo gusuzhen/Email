@@ -29,7 +29,6 @@ import cn.suishen.emailcommon.Logging;
 import cn.suishen.emailcommon.provider.Account;
 import cn.suishen.emailcommon.provider.EmailContent.AccountColumns;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.io.Serializable;
 
@@ -160,7 +159,6 @@ public class AccountSettingsUtils {
      * characters -- '*'. Wildcards match any single character, while the asterisk matches a domain
      * part (i.e. substring demarcated by a period, '.')
      */
-    @VisibleForTesting
     static boolean matchProvider(String testDomain, String providerDomain) {
         String[] testParts = testDomain.split(DOMAIN_SEPARATOR);
         String[] providerParts = providerDomain.split(DOMAIN_SEPARATOR);

@@ -54,7 +54,6 @@ import cn.suishen.emailcommon.provider.HostAuth;
 import cn.suishen.emailcommon.service.SyncWindow;
 import cn.suishen.emailcommon.utility.Utility;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.net.URISyntaxException;
 import java.util.concurrent.Callable;
@@ -626,7 +625,6 @@ public class AccountSetupBasics extends AccountSetupActivity
      * Sets the account sync, delete, and other misc flags not captured in {@code HostAuth}
      * information for the specified account based on the protocol type.
      */
-    @VisibleForTesting
     static void setFlagsForProtocol(Account account, String protocol) {
         if (HostAuth.SCHEME_IMAP.equals(protocol)) {
             // Delete policy must be set explicitly, because IMAP does not provide a UI selection

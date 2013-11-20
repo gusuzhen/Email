@@ -18,6 +18,15 @@
 package cn.suishen.email.view;
 
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import cn.suishen.email.activity.UiUtilities;
 
 /**

@@ -16,7 +16,7 @@
 
 package cn.suishen.email.mail.transport;
 
-import com.android.emailcommon.Logging;
+import cn.suishen.emailcommon.Logging;
 
 import android.util.Log;
 

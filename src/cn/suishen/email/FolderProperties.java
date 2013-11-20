@@ -16,9 +16,9 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.provider.EmailContent.MailboxColumns;
-import com.android.emailcommon.provider.EmailContent.Message;
-import com.android.emailcommon.provider.Mailbox;
+import cn.suishen.emailcommon.provider.EmailContent.MailboxColumns;
+import cn.suishen.emailcommon.provider.EmailContent.Message;
+import cn.suishen.emailcommon.provider.Mailbox;
 import com.google.common.base.Preconditions;
 
 import android.content.Context;

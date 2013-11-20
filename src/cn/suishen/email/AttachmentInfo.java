@@ -16,10 +16,10 @@
 
 package cn.suishen.email;
 
-import com.android.emailcommon.internet.MimeUtility;
-import com.android.emailcommon.provider.EmailContent.Attachment;
-import com.android.emailcommon.utility.AttachmentUtilities;
-import com.android.emailcommon.utility.Utility;
+import cn.suishen.emailcommon.internet.MimeUtility;
+import cn.suishen.emailcommon.provider.EmailContent.Attachment;
+import cn.suishen.emailcommon.utility.AttachmentUtilities;
+import cn.suishen.emailcommon.utility.Utility;
 
 import android.content.Context;
 import android.content.Intent;

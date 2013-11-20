@@ -16,8 +16,8 @@
 
 package cn.suishen.email.mail;
 
-import com.android.emailcommon.mail.CertificateValidationException;
-import com.android.emailcommon.mail.MessagingException;
+import cn.suishen.emailcommon.mail.CertificateValidationException;
+import cn.suishen.emailcommon.mail.MessagingException;
 
 import java.io.IOException;
 import java.io.InputStream;

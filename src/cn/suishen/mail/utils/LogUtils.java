@@ -18,7 +18,6 @@ package cn.suishen.mail.utils;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -73,7 +72,7 @@ public class LogUtils {
     /**
      * Enable debug logging for unit tests.
      */
-    @VisibleForTesting
+  
     static void setDebugLoggingEnabledForTests(boolean enabled) {
         sDebugLoggingEnabledForTests = Boolean.valueOf(enabled);
     }
@@ -81,7 +80,7 @@ public class LogUtils {
     /**
      * Returns true if the build configuration prevents debug logging.
      */
-    @VisibleForTesting
+   
     public static boolean buildPreventsDebugLogging() {
         return MAX_ENABLED_LOG_LEVEL > VERBOSE;
     }

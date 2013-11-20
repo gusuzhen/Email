@@ -46,7 +46,6 @@ import cn.suishen.emailcommon.provider.HostAuth;
 import cn.suishen.emailcommon.provider.Mailbox;
 import cn.suishen.emailcommon.utility.EmailAsyncTask;
 
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,13 +79,13 @@ public class MailService extends Service {
     private static final long WATCHDOG_DELAY = 10 * 60 * 1000;   // 10 minutes
 
     /** Sentinel value asking to update mSyncReports if it's currently empty */
-    @VisibleForTesting
+    
     static final int SYNC_REPORTS_ALL_ACCOUNTS_IF_EMPTY = -1;
     /** Sentinel value asking that mSyncReports be rebuilt */
-    @VisibleForTesting
+   
     static final int SYNC_REPORTS_RESET = -2;
 
-    @VisibleForTesting
+   
     Controller mController;
     private final Controller.Result mControllerCallback = new ControllerResults();
     private ContentResolver mContentResolver;
@@ -432,7 +431,6 @@ public class MailService extends Service {
      * TODO:  Look more closely at syncEnabled and see if we can simply coalesce it into
      * syncInterval (e.g. if !syncEnabled, set syncInterval to -1).
      */
-    @VisibleForTesting
     static class AccountSyncReport {
         long accountId;
         /** The time of the last sync, or, {@code 0}, the last sync time is unknown. */
@@ -475,7 +473,6 @@ public class MailService extends Service {
     /**
      * Handle the work of setupSyncReports.  Must be synchronized on mSyncReports.
      */
-    @VisibleForTesting
     void setupSyncReportsLocked(long accountId, Context context) {
         ContentResolver resolver = context.getContentResolver();
         if (accountId == SYNC_REPORTS_RESET) {
@@ -722,7 +719,6 @@ public class MailService extends Service {
      * @param accountManagerAccounts The account manager accounts to work from
      * @param providerContext the provider's context (in unit tests, this may differ from context)
      */
-    @VisibleForTesting
     public static void reconcileAccountsWithAccountManager(Context context,
             List<Account> emailProviderAccounts, android.accounts.Account[] accountManagerAccounts,
             Context providerContext) {
